@@ -1,0 +1,26 @@
+fuge_global:
+  dns_enabled: true
+  dns_host: 127.0.0.1
+  dns_port: 53053
+  dns_suffix: svc.cluster.local
+  dns_namespace: micro
+  tail: true
+  monitor: true
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '*.log'
+adderservice:
+  type: process
+  path: ../adderservice
+  run: node index.js
+  ports:
+    - adderservice=8080
+webapp:
+  type: process
+  path: ../webapp
+  run: npm start
+  ports:
+    - webapp=3000
+include:
+  - ./docker-compose.yml

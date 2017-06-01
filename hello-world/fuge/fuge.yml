@@ -1,0 +1,13 @@
+fuge_global:
+  tail: true
+  monitor: true
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '**/*.log'
+helloservice:
+  type: process
+  path: ../service
+  run: node service.js
+  ports:
+    - helloservice=8080
