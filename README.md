@@ -9,7 +9,7 @@ The simplest possible configuration. Runs a single service in the fuge shell.
 ## simple-system
 A simple system system configuration with a front end and a single microservice.
 
-## kubernets-emulation
+## kubernetes-emulation
 A slightly more complex microservice system that emulates a production Kuberntes environment. This example has a front end and two services one of which reads and writes to a mongo database which is provided through the use of a docker mongo container.
 
 ## using-docker-compose
