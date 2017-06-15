@@ -6,7 +6,7 @@ The fuge configuration is held in `./fuge/fuge.yml`.
 
 To run the system first install dependencies:
 
-``sh
+```sh
 $ cd adderservice && npm install
 $ cd ../webapp && npm install
 ```
