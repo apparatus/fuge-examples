@@ -1,0 +1,36 @@
+fuge_global:
+  run_containers: false
+  dns_enabled: true
+  dns_host: 127.0.0.1
+  dns_port: 53053
+  dns_suffix: svc.cluster.local
+  dns_namespace: micro
+  dns_external:
+    - "shareddb.local IN A 192.0.2.1"
+    - "_main._tcp.shareddb.local IN SRV 0 5 5060 shareddb.local"
+  tail: true
+  monitor: true
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '*.log'
+adderservice:
+  type: process
+  path: ../adderservice
+  run: node index.js
+  ports:
+    - adderservice=8080
+auditservice:
+  type: process
+  path: ../auditservice
+  run: 'node index.js'
+  ports:
+    - auditservice=8081
+webapp:
+  type: process
+  path: ../webapp
+  run: npm start
+  ports:
+    - webapp=3000
+include:
+  - ./docker-compose.yml

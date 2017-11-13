@@ -18,3 +18,7 @@ The same system as in the previous example but one service and the mongo contain
 ## services-and-infrastructure
 This example demonstrates how to keep infrastrcutre, i.e. databases, queuing systems etc.. running in the background with docker-compose but still have them discoverable to microservices managed with fuge. This is a useful pattern when killing and restarting the fuge shell.
 
+## external-service
+This example demonstrates how to connect shared infrastructure in development. For example, in some development teams a shared database is used for development. This example builds on the `services-and-infrastructure` example and introduces an additional shared database system through an external DNS record set that allows services to discover this databse as they would in production using DNS.
+
+

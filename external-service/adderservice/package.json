@@ -1,0 +1,16 @@
+{
+  "name": "adderservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Peter Elger <peter.elger@nearform.com>",
+  "license": "ISC",
+  "dependencies": {
+    "concordant": "^0.2.1",
+    "restify": "^4.3.0"
+  }
+}
