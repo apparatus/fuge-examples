@@ -23,25 +23,25 @@ adderservice:
     - adderservice=8080
 minusservice:
   type: process
-  path: ../adderservice
+  path: ../minusservice
   run: node index.js
   group: sums
   ports:
-    - adderservice=8080
+    - minusservice=8082
 multiplyservice:
   type: process
-  path: ../adderservice
+  path: ../multiplyservice
   run: node index.js
   group: sums
   ports:
-    - adderservice=8080
+    - multiplyservice=8083
 divideservice:
   type: process
-  path: ../adderservice
+  path: ../divideservice
   run: node index.js
   group: sums
   ports:
-    - adderservice=8080
+    - divideservice=8084
 auditservice:
   type: process
   path: ../auditservice
@@ -50,11 +50,11 @@ auditservice:
     - auditservice=8081
 importantauditservice:
   type: process
-  path: ../auditservice
+  path: ../importantauditservice
   run: 'node index.js'
   group: critical
   ports:
-    - auditservice=8081
+    - importantauditservice=8085
 webapp:
   type: process
   path: ../webapp
