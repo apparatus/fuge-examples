@@ -1,0 +1,21 @@
+fuge_global:
+  tail: true
+  monitor: true
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '*.log'
+adderservice:
+  type: process
+  path: ../adderservice
+  run: 'node service.js'
+  terminate: SIGTERM
+  ports:
+    - adderservice=8088
+webapp:
+  type: process
+  path: ../webapp
+  run: 'npm start'
+  host: 127.0.0.1
+  ports:
+    - webapp=3006
