@@ -13,7 +13,7 @@ fuge_global:
     - '*.log'
 adderservice:
   type: process
-  group: critical
+  group: c
   path: ../adderservice
   run: node index.js
   ports:
@@ -22,6 +22,7 @@ auditservice:
   type: process
   path: ../auditservice
   run: 'node index.js'
+  group: a
   ports:
     - auditservice=8081
 webapp:

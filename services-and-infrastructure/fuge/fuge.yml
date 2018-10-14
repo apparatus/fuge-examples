@@ -22,12 +22,13 @@ auditservice:
   path: ../auditservice
   run: 'node index.js'
   ports:
-    - auditservice=8081
+    - auditservice=8088
 webapp:
   type: process
   path: ../webapp
   run: npm start
   ports:
-    - webapp=3000
+    - webapp=3009
+  host: 127..0.0.1
 include:
   - ./docker-compose.yml

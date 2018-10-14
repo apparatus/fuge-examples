@@ -8,6 +8,7 @@ fuge_global:
 helloservice:
   type: process
   path: ../service
+  group: critical
   run: node service.js
   ports:
     - helloservice=8080
