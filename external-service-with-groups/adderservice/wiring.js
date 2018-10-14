@@ -11,11 +11,7 @@ module.exports = function (service) {
     })
   })
 
-  // console.warn('\n process.eeennnvvv in process = '+process.env.ADDERSERVICE_SERVICE_PORT)
-
-  // server.listen(process.env.ADDERSERVICE_SERVICE_PORT, '0.0.0.0', function () {
-    server.listen(process.env.ADDERSERVICE_SERVICE_PORT, '0.0.0.0', function () {
-
+  server.listen(process.env.ADDERSERVICE_SERVICE_PORT, '0.0.0.0', function () {
     console.log('%s listening at %s', server.name, server.url)
   })
 }
