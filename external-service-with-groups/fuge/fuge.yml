@@ -2,7 +2,7 @@ fuge_global:
   run_containers: false
   dns_enabled: true
   dns_host: 127.0.0.1
-  dns_port: 53066
+  dns_port: 53065
   dns_suffix: svc.cluster.local
   dns_namespace: micro
   dns_external:
@@ -45,7 +45,7 @@ divideservice:
     - divideservice=8004
 auditservice:
   type: process
-  path: ../auditservice
+  path: ./auditservice
   run: 'node index.js'
   terminate: SIGINT
   ports:
@@ -56,7 +56,7 @@ importantauditservice:
   run: 'node index.js'
   group: critical
   ports:
-    - importantauditservice=8008
+    - importantauditservice=8006
 webapp:
   type: process
   path: ../webapp
@@ -64,6 +64,6 @@ webapp:
   terminate: SIGINT
   group: app
   ports:
-    - webapp=3003
+    - webapp=3000
 include:
   - ./docker-compose.yml

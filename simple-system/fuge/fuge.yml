@@ -10,11 +10,11 @@ adderservice:
   path: ../adderservice
   run: 'node service.js'
   ports:
-    - adderservice=8087
+    - adderservice=8080
 webapp:
   type: process
   path: ../webapp
   run: 'npm start'
   host: 127.0.0.1
   ports:
-    - webapp=3006
+    - webapp=3000

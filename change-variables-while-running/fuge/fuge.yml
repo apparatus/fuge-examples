@@ -11,11 +11,11 @@ adderservice:
   run: 'node service.js'
   terminate: SIGTERM
   ports:
-    - adderservice=8088
+    - adderservice=8081
 webapp:
   type: process
   path: ../webapp
   run: 'npm start'
   host: 127.0.0.1
   ports:
-    - webapp=3006
+    - webapp=3000
