@@ -1,3 +1,7 @@
+
+
+
+
 # Fuge Simple System Example
 This example system contains an `express.js` based front end and a `restify` based service. The service
 just adds two numbers together and returns the result. The front end provides a user interface to the service.

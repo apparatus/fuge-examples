@@ -28,6 +28,7 @@ webapp:
   path: ../webapp
   run: npm start
   ports:
-    - webapp=3000
+    - webapp=3001
+  host: 127..0.0.1
 include:
   - ./docker-compose.yml

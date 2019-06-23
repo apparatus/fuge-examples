@@ -15,5 +15,6 @@ webapp:
   type: process
   path: ../webapp
   run: 'npm start'
+  host: 127.0.0.1
   ports:
     - webapp=3000

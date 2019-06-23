@@ -18,12 +18,14 @@ adderservice:
   type: process
   path: ../adderservice
   run: node index.js
+  group: cr
   ports:
     - adderservice=8080
 auditservice:
   type: process
   path: ../auditservice
   run: 'node index.js'
+  group: min
   ports:
     - auditservice=8081
 webapp:
